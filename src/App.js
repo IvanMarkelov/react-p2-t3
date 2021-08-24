@@ -1,14 +1,25 @@
 import logo from './logo.svg';
+import React from 'react';
 import './App.css';
 
+function sumOfNaturalNums(n) {
+  return ((n * (parseFloat(n) + 1)) / 2);
+}
+
 function App() {
+
+  let [naturalNum, setNum] = React.useState(4);
+  let naturalNumChanged = (e) => setNum(e.target.value);
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
+        <div id="task-id">
+          <input type="number" value={naturalNum} onChange={naturalNumChanged} />
+          <p>
+            The sum of {naturalNum} natural numbers is {sumOfNaturalNums(naturalNum)}
+          </p>
+        </div>
         <a
           className="App-link"
           href="https://reactjs.org"
