@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import React from 'react';
 import './App.css';
+import { Button } from '@material-ui/core';
 
 function sumOfNaturalNums(n) {
   return ((n * (parseFloat(n) + 1)) / 2);
@@ -20,14 +21,10 @@ function App() {
             The sum of {naturalNum} natural numbers is {sumOfNaturalNums(naturalNum)}
           </p>
         </div>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <a className="App-link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
           Learn React
         </a>
+        <Button color="primary">Hello World</Button>
       </header>
     </div>
   );
